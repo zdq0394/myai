@@ -1,0 +1,11 @@
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+input1 = tf.constant([1.0, 2.0, 3.0], name="input1")
+input2 = tf.Variable(tf.random_uniform([3]), name="input2")
+
+output = tf.add_n([input1, input2], name="add")
+
+writer = tf.summary.FileWriter("../logs", tf.get_default_graph())
+
+writer.close()
