@@ -18,7 +18,7 @@ op = tf.train.GradientDescentOptimizer(0.01).minimize(loss)
 train_X = np.linspace(-1, 1, 100)
 train_Y = 2 * train_X + np.random.randn(*train_X.shape)*0.33 + 10
 
-with tf.Session("grpc://127.0.0.1:2223") as sess:
+with tf.Session("grpc://127.0.0.1:2222") as sess:
     sess.run(init_op)
     for i in range(10):
         for (x, y) in zip(train_X, train_Y):
