@@ -2,4 +2,5 @@
 
 * awslabs/multi-model-server
 * tfserving
+* kfserving
 
